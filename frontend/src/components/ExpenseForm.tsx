@@ -34,7 +34,7 @@ const ExpenseForm = ({ onClick, onSave }: ExpenseFormProps) => {
 
     try {
       //  DBに登録
-      const res = await fetch("http://localhost:3001/api/expenses", {
+      const res = await fetch("https://kakeibokari.onrender.com/api/expenses", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(expenseData),

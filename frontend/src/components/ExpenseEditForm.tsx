@@ -45,7 +45,7 @@ const ExpenseEditForm = ({
     try {
       // 🔹 サーバーのDBを更新
       const res = await fetch(
-        `http://localhost:3001/api/expenses/${expense.id}`,
+        `https://kakeibokari.onrender.com/api/expenses/${expense.id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },

@@ -57,11 +57,14 @@ const CalendarMenu = ({
     memo: string;
   }) => {
     try {
-      const res = await fetch("http://localhost:3001/api/fixed_expenses", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(fixedData),
-      });
+      const res = await fetch(
+        "https://kakeibokari.onrender.com/api/fixed_expenses",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(fixedData),
+        }
+      );
 
       if (!res.ok) throw new Error("固定費の保存に失敗");
 
@@ -69,7 +72,9 @@ const CalendarMenu = ({
       await res.json();
 
       // POSTが成功したら最新データを取得し直す
-      const refreshed = await fetch("http://localhost:3001/api/fixed_expenses");
+      const refreshed = await fetch(
+        "https://kakeibokari.onrender.com/api/fixed_expenses"
+      );
       const newFixeds = await refreshed.json();
 
       //  これで即時反映

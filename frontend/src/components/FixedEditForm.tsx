@@ -44,7 +44,7 @@ const FixedEditForm = ({
 
     try {
       const res = await fetch(
-        `http://localhost:3001/api/fixed_expenses/${fixed.id}`,
+        `https://kakeibokari.onrender.com/api/fixed_expenses/${fixed.id}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -73,7 +73,7 @@ const FixedEditForm = ({
 
     try {
       const res = await fetch(
-        `http://localhost:3001/api/fixed_expenses/${fixed.id}`,
+        `https://kakeibokari.onrender.com/api/fixed_expenses/${fixed.id}`,
         { method: "DELETE" }
       );
 

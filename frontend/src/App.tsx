@@ -42,7 +42,9 @@ const App = () => {
   useEffect(() => {
     const fetchExpenses = async () => {
       try {
-        const res = await fetch("http://localhost:3001/api/expenses");
+        const res = await fetch(
+          "https://kakeibokari.onrender.com/api/expenses"
+        );
         const data = await res.json();
         setExpenses(Array.isArray(data) ? data : []);
       } catch (err) {
@@ -56,7 +58,9 @@ const App = () => {
   useEffect(() => {
     const fetchFixedExpenses = async () => {
       try {
-        const res = await fetch("http://localhost:3001/api/fixed_expenses");
+        const res = await fetch(
+          "https://kakeibokari.onrender.com/api/fixed_expenses"
+        );
         const data = await res.json();
         setFixedExpenses(Array.isArray(data) ? data : []);
       } catch (err) {
@@ -142,20 +146,20 @@ const App = () => {
           onDelete={async (id) => {
             const isFixed = fixedExpenses.some((f) => f.id === id);
             const url = isFixed
-              ? `http://localhost:3001/api/fixed_expenses/${id}`
-              : `http://localhost:3001/api/expenses/${id}`;
+              ? `https://kakeibokari.onrender.com/api/fixed_expenses/${id}`
+              : `https://kakeibokari.onrender.com/api/expenses/${id}`;
 
             const res = await fetch(url, { method: "DELETE" });
 
             if (res.ok) {
               if (isFixed) {
                 const refreshed = await fetch(
-                  "http://localhost:3001/api/fixed_expenses"
+                  "https://kakeibokari.onrender.com/api/fixed_expenses"
                 );
                 setFixedExpenses(await refreshed.json());
               } else {
                 const refreshed = await fetch(
-                  "http://localhost:3001/api/expenses"
+                  "https://kakeibokari.onrender.com/api/expenses"
                 );
                 setExpenses(await refreshed.json());
               }
