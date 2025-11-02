@@ -1,0 +1,35 @@
+{
+  "name": "calendar-app-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 8080",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --port 8000"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "recharts": "^3.3.0",
+    "tailwindcss": "^4.0.13"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^4.7.0",
+    "daisyui": "^5.0.2",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "react-icons": "^5.5.0",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.20",
+    "vite-plugin-checker": "^0.11.0"
+  },
+  "description": "",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

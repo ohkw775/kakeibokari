@@ -1,0 +1,24 @@
+// {
+//   "compilerOptions": {
+//     "target": "esnext", // 最新のJSに準拠したコードを出力させる
+//     "module": "commonjs", // Node.jsでのモジュールシステムに準拠
+//     "esModuleInterop": true, // ESモジュールとCommonJSモジュールの相互運用性を有効にする
+//     "forceConsistentCasingInFileNames": true, // ファイル名の大文字小文字を厳密にチェック
+//     "strict": true, // 厳密な型チェックを有効にする
+//     "noUnusedParameters": true, // 未使用のパラメータをエラーとする
+//     "noUnusedLocals": true, // 未使用のローカル変数をエラーとする
+//     "noImplicitReturns": true, // 関数の全てのパスで値を返すことを強制する
+//     "outDir": "src/js", // コンパイル後のJSファイルを出力するディレクトリ
+//     "allowJs": true
+//   },
+//   "include": ["src"], // コンパイル対象のファイルを指定
+//   "exclude": ["node_modules"]
+// }
+
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
